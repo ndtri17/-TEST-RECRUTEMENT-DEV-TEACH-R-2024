@@ -2,27 +2,27 @@
 
 ## Description
 
-Ce projet est une application web full-stack combinant un backend développé avec Symfony et un frontend développé avec React et Vite. L'application permet de gérer et afficher un catalogue de produits avec des fonctionnalités telles que le tri des produits par prix et par nom. Ce projet est conçu pour être modulaire et évolutif, avec une architecture claire et des bonnes pratiques en matière de développement.
+Ce projet est une demo full-stack combinant un backend développé avec Symfony et un frontend développé avec React installé via Vite.
 
 ## Technologies Utilisées
 
 - **Backend (PHP) :**
-  - Symfony 7.2 : Framework backend permettant de développer des applications web robustes.
-  - Doctrine ORM : Pour la gestion de la base de données via des entités PHP.
-  - Doctrine DBAL et Doctrine Migrations : Pour la gestion des migrations de base de données.
-  - Nelmio CORS Bundle : Pour gérer les problèmes de CORS (Cross-Origin Resource Sharing).
+  - Symfony 7.2
+  - Doctrine ORM
+  - Doctrine DBAL et Doctrine Migrations
+  - Nelmio CORS Bundle
 
 - **Frontend (JavaScript) :**
-  - React 18 : Une bibliothèque JavaScript pour construire des interfaces utilisateur dynamiques et réactives.
-  - Vite : Un bundler et un serveur de développement moderne pour un environnement rapide de développement frontend.
-  - TailwindCSS : Framework CSS utilitaire permettant de créer des interfaces élégantes et réactives.
-  - Axios : Bibliothèque pour effectuer des requêtes HTTP depuis le frontend.
-  - React Router DOM : Pour la gestion de la navigation dans l'application React.
+  - React 18 
+  - Vite 
+  - TailwindCSS 
+  - Axios 
+  - React Router DOM
 
 - **Outils de développement :**
-  - ESLint : Pour l'analyse statique du code et maintenir une base de code propre.
-  - Autoprefixer et PostCSS : Pour la gestion des préfixes CSS et l'optimisation du code CSS.
-  - TailwindCSS Plugin : Intégré pour faciliter l'utilisation de classes utilitaires dans le CSS.
+  - ESLint
+  - Autoprefixer et PostCSS
+  - TailwindCSS Plugin
 
 ## Prérequis
 
