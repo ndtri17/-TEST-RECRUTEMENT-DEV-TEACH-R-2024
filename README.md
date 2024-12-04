@@ -7,13 +7,13 @@ Ce projet est une demo full-stack combinant un backend développé avec Symfony 
 ## Technologies Utilisées
 
 - **Backend (PHP) :**
-  - Symfony 7.2
+  - Symfony 7.2 ( https://symfony.com/doc/current/setup.html )
   - Doctrine ORM
   - Doctrine DBAL et Doctrine Migrations
   - Nelmio CORS Bundle
 
 - **Frontend (JavaScript) :**
-  - React 18 
+  - React 18 ( https://vite.dev/guide/ )
   - Vite 
   - TailwindCSS 
   - Axios 
