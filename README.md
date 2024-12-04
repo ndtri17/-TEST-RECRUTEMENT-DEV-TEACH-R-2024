@@ -24,6 +24,9 @@ Ce projet est une demo full-stack combinant un backend développé avec Symfony 
   - Autoprefixer et PostCSS
   - TailwindCSS Plugin
 
+ - **Base de donnee :**
+   - Mysql
+
 ## Prérequis
 
 Avant de commencer, vous devez avoir les outils suivants installés :
