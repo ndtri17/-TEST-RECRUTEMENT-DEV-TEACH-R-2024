@@ -14,6 +14,7 @@ const ProductManagement = () => {
   const [price, setPrice] = useState("");
   const [category, setCategory] = useState("");
   const [addingNotification, setAddingNotification] = useState("");
+  const [productIdtoModify, setProductIdtoModify] = useState("");
   
   const [isOpenAddCategory, setIsOpenAddCategory] = React.useState(false);
   const [categoryName, setCategoryName] = useState("");
@@ -93,7 +94,7 @@ const ProductManagement = () => {
     e.preventDefault();
 
     try {
-      const response = await api.put(`/product_update/${id}`,   {
+      const response = await api.put(`/product_update/${productIdtoModify}`,   {
         name,
         description,
         price,
@@ -329,7 +330,26 @@ const ProductManagement = () => {
                   value={price}
                   onChange={(e) => setPrice(e.target.value)}
                 />
-              </div>              
+              </div>  
+              <div className="mb-4">
+                <label htmlFor="category" className="block text-gray-700">
+                  Category
+                </label>
+                <select
+                  id="category"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg"
+                  required
+                  onChange={(e) => setCategory(e.target.value)}
+                  value={category}
+                >
+                  <option value=""> Select a category</option> 
+                  {categories.map((category) => (
+                    <option key={category.id} value={category.name}>
+                      {category.name}
+                    </option>
+                  ))}
+                </select>     
+              </div>        
               <div className="flex justify-end">
                 <button
                   type="submit"
@@ -369,7 +389,10 @@ const ProductManagement = () => {
               <td className="px-4 py-2 border-b">{product.price}$</td>
               <td className="px-4 py-2 border-b">{product.category}</td>
               <td className="px-4 py-2 border-b">
-                <button className="text-blue-500 hover:text-blue-700 mx-2" onClick={toggleModifyProduct}>
+                <button className="text-blue-500 hover:text-blue-700 mx-2" onClick={() => {
+                  toggleModifyProduct();
+                  setProductIdtoModify(product.id);
+                }}>
                   <FaEdit />
                 </button>
                 <button className="text-red-500 hover:text-red-700 mx-2" onClick={() => handleDeleteProduct(product.id)}>

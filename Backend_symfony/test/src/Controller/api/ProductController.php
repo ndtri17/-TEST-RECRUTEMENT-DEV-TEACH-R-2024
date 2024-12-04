@@ -71,10 +71,10 @@ class ProductController extends AbstractController
         ]);
     }
 
-    #[Route('/api/products_update/{id}', name: 'product_update', methods: ['PUT'])]
+    #[Route('/api/product_update/{id}', name: 'product_update', methods: ['PUT'])]
     public function update($id, Request $request, EntityManagerInterface $entityManager): JsonResponse
     {
-        $updated_product_data = $request->request->all();
+        $updated_product_data = json_decode($request->getContent(), true);
 
         $updated_product = $entityManager->getRepository(Product::class)->find($id);
 
